@@ -145,6 +145,20 @@ footer p{margin-bottom:10px}
  .compare{grid-template-columns:1fr 1fr}
  .cookie{top:auto;bottom:12px;max-width:560px;left:12px;right:auto}
 }
+
+/* misterio */
+.blur{filter:blur(5px);user-select:none;-webkit-user-select:none;pointer-events:none}
+.card.lock{position:relative;overflow:hidden}
+.card.lock .tag:before{content:"🔒 "}
+.card.lock h3{font-size:1.08rem}
+.card.lock p{color:var(--texto)}
+.card.lock .more{display:block;margin-top:8px;font-size:.84rem;font-weight:700;color:var(--ambar-esc)}
+.teaser{text-align:center;color:var(--cinza);font-size:.95rem;margin:22px auto 0;max-width:520px}
+
+.mystery{list-style:none;margin:18px 0}
+.mystery li{background:#fff;border:1px solid #E6DFCF;border-left:5px solid var(--ambar);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.mystery b{display:block;color:var(--verde);margin-bottom:4px}
+.mystery span{display:block;font-size:.93rem;color:var(--texto)}
 </style>
 
 <!-- Meta Pixel: preencha META_PIXEL_ID na configuração abaixo -->
@@ -152,7 +166,7 @@ footer p{margin-bottom:10px}
 var CONFIG = {
   META_PIXEL_ID: "2499498933794279",
   CHECKOUT_URL: "https://pay.hotmart.com/T108214060N",
-  PRICE_TEXT: "",       // ex.: "R$ 19,90" (deixe vazio para ocultar)
+  PRICE_TEXT: "R$ 27,99", // ex.: "R$ 19,90" (deixe vazio para ocultar)
   CONTACT_EMAIL: ""     // e-mail de contato (aparece na política de privacidade)
 };
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -230,24 +244,23 @@ if(PIXEL_OK){fbq('init',CONFIG.META_PIXEL_ID);fbq('track','PageView');}
 </section>
 
 <section id="conteudo">
- <div class="wrap">
+ <div class="wrap narrow">
   <span class="eyebrow">O que tem dentro</span>
-  <h2>8 capítulos com roteiros e checklists para você usar hoje</h2>
-  <div class="cards">
-   <div class="card"><span class="tag">Capítulo 2</span><h3>Roteiro da primeira conversa</h3><p>O que dizer, o que evitar e como terminar sem briga, em 5 passos.</p></div>
-   <div class="card"><span class="tag">Capítulo 3</span><h3>Proteger o dinheiro da casa em 7 dias</h3><p>Separar contas, cartões e limites, e pagar o essencial primeiro.</p></div>
-   <div class="card"><span class="tag">Capítulo 4</span><h3>O que não fazer</h3><p>Pagar dívida sem plano, emprestar, encobrir e ameaçar sem cumprir.</p></div>
-   <div class="card"><span class="tag">Capítulo 5</span><h3>Sinais de recaída e sites clandestinos</h3><p>Como reconhecer e como reagir, sem invadir a privacidade de um adulto.</p></div>
-   <div class="card"><span class="tag">Capítulo 6</span><h3>Se for um filho adolescente</h3><p>Como agir, conversar e proteger quando você é o responsável legal.</p></div>
-   <div class="card"><span class="tag">Capítulo 7</span><h3>Cuidar de você</h3><p>Limites, rede de apoio e quando buscar ajuda profissional.</p></div>
-   <div class="card"><span class="tag">Capítulo 8</span><h3>Guia de ajuda gratuita</h3><p>CVV, atendimento do SUS, CAPS, Jogadores Anônimos, Procon e urgências.</p></div>
-   <div class="card"><span class="tag">Capítulo 1</span><h3>Você não está sozinha(o)</h3><p>O que está acontecendo e quais sinais observar, sem rótulos.</p></div>
-  </div>
+  <h2>Respostas para as perguntas que você já se fez de madrugada</h2>
+  <ul class="mystery">
+   <li><b>Qual é a frase que abre a conversa sem virar briga?</b><span class="blur">Existe um jeito de começar que desarma a defesa do outro</span></li>
+   <li><b>Em que ordem proteger as contas, os cartões e o dinheiro da casa?</b><span class="blur">A ordem importa mais do que você imagina</span></li>
+   <li><b>Qual erro parece ajuda, mas piora tudo?</b><span class="blur">Muita gente comete por amor, sem saber</span></li>
+   <li><b>Como saber se a aposta voltou escondida?</b><span class="blur">Sinais discretos que quase ninguém percebe</span></li>
+   <li><b>E se quem aposta é o seu filho?</b><span class="blur">Seu papel e o que fazer sem perder a confiança dele(a)</span></li>
+   <li><b>E você, quem cuida de você?</b><span class="blur">Um plano simples para não adoecer junto</span></li>
+  </ul>
   <div class="bonus">
-   <b class="t">Incluso no guia</b>
-   <h3>Modelo de acordo familiar sobre dinheiro</h3>
-   <p>Regras combinadas, quem cuida de quê e quando revisar — pronto para preencher em conjunto e transformar a conversa em compromisso.</p>
+   <b class="t">Surpresa incluída</b>
+   <h3>O acordo que a família assina junto</h3>
+   <p>Um modelo pronto para preencher em conjunto: <span class="blur">regras, quem cuida de quê e quando revisar</span>.</p>
   </div>
+  <p class="teaser">Mostramos só o começo. O resto você descobre lendo.</p>
   <div class="cta-block"><a class="btn big pulse js-cta" href="#" data-where="conteudo">Quero proteger minha família agora <span class="arr">→</span></a><p class="sub-cta">Acesso após a confirmação do pagamento · compra segura pela Hotmart</p></div>
  </div>
 </section>
@@ -269,23 +282,6 @@ if(PIXEL_OK){fbq('init',CONFIG.META_PIXEL_ID);fbq('track','PageView');}
  </div>
 </section>
 
-<section>
- <div class="wrap narrow">
-  <span class="eyebrow">Sumário</span>
-  <h2>O caminho, passo a passo</h2>
-  <ol class="toc">
-   <li><div><b>Você não está sozinha(o)</b><span>O que está acontecendo e quais sinais observar, sem rótulos.</span></div></li>
-   <li><div><b>Como conversar sem virar briga</b><span>Quando falar, como falar e um roteiro pronto.</span></div></li>
-   <li><div><b>Proteger o dinheiro da casa</b><span>Passo a passo e checklist de 7 dias.</span></div></li>
-   <li><div><b>O que não fazer</b><span>Os erros mais comuns, explicados sem culpa.</span></div></li>
-   <li><div><b>Sinais de recaída e de apostas escondidas</b><span>Como reconhecer e como reagir.</span></div></li>
-   <li><div><b>Se quem aposta é seu filho adolescente</b><span>Como agir sendo responsável legal.</span></div></li>
-   <li><div><b>Cuidar de você</b><span>Limites, rede de apoio e plano semanal.</span></div></li>
-   <li><div><b>Ajuda gratuita</b><span>Onde ir, o que esperar e o que dizer ao chegar.</span></div></li>
-  </ol>
- </div>
-</section>
-
 <section class="alt" id="oferta">
  <div class="wrap narrow">
   <div class="offer">
@@ -293,7 +289,7 @@ if(PIXEL_OK){fbq('init',CONFIG.META_PIXEL_ID);fbq('track','PageView');}
    <h3>Guia “Como ajudar quem você ama”</h3>
    <div class="price-line" id="price2"></div>
    <ul class="checks">
-    <li>PDF com 33 páginas, 8 capítulos, roteiros e checklists</li>
+    <li>PDF com 33 páginas, roteiros e checklists</li>
     <li>Roteiro da primeira conversa em 5 passos</li>
     <li>Plano de 7 dias para proteger o dinheiro da casa</li>
     <li>Modelo de acordo familiar sobre dinheiro</li>
@@ -334,7 +330,7 @@ if(PIXEL_OK){fbq('init',CONFIG.META_PIXEL_ID);fbq('track','PageView');}
   <details><summary>E se a pessoa não quiser parar?</summary><p>O guia foi feito para esse cenário. Ele não depende da decisão do outro: mostra como proteger o dinheiro da casa, como conversar sem brigar e como cuidar de você, aconteça o que acontecer.</p></details>
   <details><summary>Serve se as bets voltarem a ser liberadas?</summary><p>Sim. O conteúdo trata de conversa, proteção do dinheiro da casa e cuidado com a família, e vale com ou sem bets legalizadas.</p></details>
   <details><summary>O guia substitui um psicólogo?</summary><p>Não. É um material informativo e prático. Ele indica serviços gratuitos e quando buscar ajuda profissional.</p></details>
-  <details><summary>Ele ensina a vigiar celular ou contas de outra pessoa?</summary><p>Não. O foco é proteger o seu dinheiro, combinar regras e conversar. Para filhos menores de idade, o capítulo 6 trata da supervisão transparente e combinada.</p></details>
+  <details><summary>Ele ensina a vigiar celular ou contas de outra pessoa?</summary><p>Não. O foco é proteger o seu dinheiro, combinar regras e conversar. Para filhos menores de idade, o guia trata da supervisão transparente e combinada.</p></details>
   <details><summary>Posso desistir da compra?</summary><p>Sim. Compras on-line têm direito de arrependimento de 7 dias, previsto no Código de Defesa do Consumidor, e a solicitação é feita pela Hotmart.</p></details>
  </div>
 </section>
@@ -366,7 +362,7 @@ if(PIXEL_OK){fbq('init',CONFIG.META_PIXEL_ID);fbq('track','PageView');}
   // preço (opcional)
   if(CONFIG.PRICE_TEXT){
     document.getElementById('price').innerHTML='Apenas <b>'+CONFIG.PRICE_TEXT+'</b>';
-    document.getElementById('price2').innerHTML='Hoje por apenas <b>'+CONFIG.PRICE_TEXT+'</b>';
+    document.getElementById('price2').innerHTML='Acesso completo por <b>'+CONFIG.PRICE_TEXT+'</b>';
   }
   if(CONFIG.CONTACT_EMAIL){ document.getElementById('contato').textContent='Contato: '+CONFIG.CONTACT_EMAIL+'.'; }
 
